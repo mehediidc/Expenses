@@ -1,0 +1,1 @@
+var exec=require('cordova/exec'); exports.saveBackup=function(o,s,f){exec(s,f,'NativeBridge','saveBackup',[o]);}; exports.printHtml=function(o,s,f){exec(s,f,'NativeBridge','printHtml',[o]);};

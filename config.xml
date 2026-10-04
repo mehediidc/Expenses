@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="com.mhdigital.myexpenses" version="4.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>MyExpenses</name>
+    <description>Offline income and expense tracker</description>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <icon src="www/icon.png" />
+    <plugin name="MyExpensesNative" spec="./plugins/myexpenses-native" />
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </edit-config>
+    </platform>
+</widget>

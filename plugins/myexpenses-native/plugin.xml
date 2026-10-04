@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.mhdigital.myexpenses.native" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>MyExpensesNative</name>
+    <js-module name="NativeBridge" src="www/nativebridge.js">
+        <clobbers target="cordova.plugins.nativeBridge" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="app/src/main/AndroidManifest.xml">
+            <uses-feature android:name="android.software.print" android:required="false" />
+        </config-file>
+        <source-file src="src/android/NativeBridge.java" target-dir="app/src/main/java/com/mhdigital/myexpenses/nativebridge" />
+    </platform>
+</plugin>
